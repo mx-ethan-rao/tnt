@@ -67,11 +67,19 @@ On the way...
 
 ### Evaluation
 
-To evaluate a pre-trained TNT model on ImageNet val with a single GPU run:
+To evaluate a pre-trained TNT model on ImageNet val with a single GPU:
+
+**pru_loc**: The specific layers that token pruning occurs
+
+**keep_rate**: The ratio of tokens to retain at each pruning layer. The length of keep_rate shoule be equal to that of pro_loc
+
+**sim_pru**: The number of tokens to be pruned at similarity-based pruning
+
+(You can try different **pru_loc**, **keep_rate** and **sim_pru**)
 
 **Deit-Base-Distil.**
 
-Full tokens ref.:
+Full tokens reference:
 ```
 * Acc@1 82.548 Acc@5 96.204 GFLOPs: 17.68 loss 0.715
 ```
@@ -97,7 +105,7 @@ This should give
 
 **Deit-Small-Distil.**
 
-Full tokens ref.: 
+Full tokens reference: 
 ```
 * Acc@1 80.494 Acc@5 95.190 GFLOPs: 4.63 loss 0.780
 ```
@@ -125,9 +133,8 @@ This should give
 
 ### Training
 
-To train Dynamic Spatial Sparsification models on ImageNet, run:
+To train Training Noise Token (TNT) Pruning on ImageNet, run:
 
-(You can train models with different keeping ratio by adjusting ```base_rate```. )
 
 **DeiT-Base-Distil.**
 
