@@ -31,7 +31,6 @@ arXiv version is available at [https://arxiv.org/pdf/2411.18092](https://arxiv.o
 ---
 
 
-## Usage
 
 ### Requirements
 
@@ -57,11 +56,14 @@ The directory structure is the standard layout for the torchvision [`datasets.Im
     class2/
       img4.jpeg
 ```
+---
 
 
 ### Jupyter Notebook Demo
 
 On the way...
+
+---
 
 ### Evaluation
 
@@ -118,6 +120,8 @@ This should give
 * Acc@1 78.006 Acc@5 93.832 GFlops 2.42 loss 0.887
 ```
 
+---
+
 
 ### Training
 
@@ -136,6 +140,8 @@ torchrun --nproc_per_node=8 main.py --model deit_small_distilled_patch16_224 --b
 ```
 torchrun --nproc_per_node=8 main.py --model deit_base_distilled_patch16_224 --batch-size 256 --data-path /path/to/imagenet --output_dir /path/to/save --finetune /path/to/deit_base_distilled_patch16_224-df68dfff.pth --epochs 40
 ```
+
+---
 
 
 ## License
