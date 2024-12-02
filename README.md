@@ -133,16 +133,16 @@ This should give
 
 ### Training
 
-To train Training Noise Token (TNT) Pruning on ImageNet, run:
+To fine-tune a Training Noise Token (TNT) Pruning on ImageNet, run:
 
 
-**DeiT-Base-Distil.**
+**Base Model: DeiT-Base-Distil.**
 
 ```
 torchrun --nproc_per_node=8 main.py --model deit_small_distilled_patch16_224 --batch-size 256 --data-path /path/to/imagenet --output_dir /path/to/save --finetune /path/to/deit_small_distilled_patch16_224-649709d9.pth --epochs 40
 ```
 
-**DeiT-Small-Distil.**
+**Base Model: DeiT-Small-Distil.**
 
 ```
 torchrun --nproc_per_node=8 main.py --model deit_base_distilled_patch16_224 --batch-size 256 --data-path /path/to/imagenet --output_dir /path/to/save --finetune /path/to/deit_base_distilled_patch16_224-df68dfff.pth --epochs 40
